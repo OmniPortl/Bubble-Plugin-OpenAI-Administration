@@ -1,0 +1,18 @@
+{
+    "categories": {
+        "0": "artificial intelligence (AI)",
+        "1": "chat",
+        "2": "compliance",
+        "3": "technical",
+        "4": "productivity"
+    },
+    "data_tracked": false,
+    "demo_page": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-invites",
+    "description": "Manage OpenAI org & project admin from Bubble: invites, users, projects, service accounts, API keys, rate limits, audit logs.\n\n\n\n\n\n[b]Links[/b]\n\n- Demo: https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-invites\n- Editor: https://bubble.io/page?id=openai-plugin-omniportl&tab=Design&name=index&type=page&type_id=endpoints&elements=bTGYf\n- Docs: https://omniportl.com/plugin-docs/openai-administration-1771207186914x307471176765014000?page=guides&section=overview-openai-administration\n\n[b]Audit Logs[/b]\n\n- List Audit Logs\n\n[b]Audit Logs - Admin API Keys[/b]\n\n- List Admin API Keys\n- Create Admin API Key\n- Retrieve Admin API Key\n- Delete Admin API Key\n\n[b]Invites[/b]\n\n- List Invites\n- Create Invite\n- Retrieve Invite\n- Delete Invite\n\n[b]Users[/b]\n\n- List Users\n- Retrieve User\n- Delete User\n\n[b]Projects[/b]\n\n- List Projects\n- Create Project\n- Retrieve Project\n- Modify Project\n- Archive Project\n\n[b]Projects - Users[/b]\n\n- List Project Users\n- Create Project User\n- Retrieve Project User\n- Modify Project User\n- Delete Project User\n\n[b]Projects - Service Accounts[/b]\n\n- List Project Service Accounts\n- Create Project Service Account\n- Retrieve Project Service Account\n- Delete Project Service Account\n\n[b]Projects - API Keys[/b]\n\n- List Project API Keys\n- Retrieve Project API Key\n- Delete Project API Key\n\n[b]Projects - Rate Limits[/b]\n\n- List Project Rate Limits\n- Update Project Rate Limit",
+    "designed_for": "both",
+    "image": "//meta-q.cdn.bubble.io/f1768512900065x632528226479699200/OpenAI_Icon_1.webp",
+    "license": "open_source",
+    "link": "https://omniportl.com/plugin-docs/openai-administration-1771207186914x307471176765014000?page=guides&section=overview-openai-administration",
+    "name": "OpenAI Administration",
+    "plugin_instructions": "- Get your OpenAI API key here: \n\nhttps://platform.openai.com/settings/organization/api-keys\n\n- In Bubble, install the plugin and paste the key into the plugin’s API Key / Authorization setting."
+}

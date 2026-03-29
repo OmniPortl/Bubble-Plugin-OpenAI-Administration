@@ -1,0 +1,902 @@
+{
+    "auth": "private_key_header",
+    "calls": {
+        "AGK": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-invites",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Invites",
+            "params": {
+                "AGL": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AGM": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "inv_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 0,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGK",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGK\":{\"caption\":\"List Invite\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AGK.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AGK.data\":{\"caption\":\"List Invites data\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_status\":{\"ret_btype\":\"text\",\"caption\":\"status\",\"sample_value\":\"string value\",\"path\":[\"status\"]},\"_p_invited_at\":{\"ret_btype\":\"number\",\"caption\":\"invited_at\",\"sample_value\":1711471533,\"path\":[\"invited_at\"]},\"_p_expires_at\":{\"ret_btype\":\"number\",\"caption\":\"expires_at\",\"sample_value\":1714063533,\"path\":[\"expires_at\"]},\"_p_accepted_at\":{\"ret_btype\":\"number\",\"caption\":\"accepted_at\",\"sample_value\":1711471533,\"path\":[\"accepted_at\"]},\"_p_projects\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AGK.projects\",\"caption\":\"projects\",\"path\":[\"projects\"]}}},\"plugin_api.AGK.projects\":{\"caption\":\"List Invites project\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/invites"
+        },
+        "AGN": {
+            "body": "{\n  \"email\": \"<email>\",\n  \"role\": \"<role>\"\n}",
+            "body_params": {
+                "AGO": {
+                    "allow_blank": false,
+                    "doc": "Email address to invite to the organization.",
+                    "key": "email",
+                    "value": "user@example.com"
+                },
+                "AGP": {
+                    "allow_blank": false,
+                    "doc": "Role to grant via invite. Allowed values: owner or reader.",
+                    "key": "role",
+                    "value": "owner"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=create-invite",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Create Invite",
+            "publish_as": "action",
+            "rank": 1,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGN",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGN\":{\"caption\":\"Create Invite\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_status\":{\"ret_btype\":\"text\",\"caption\":\"status\",\"sample_value\":\"string value\",\"path\":[\"status\"]},\"_p_invited_at\":{\"ret_btype\":\"number\",\"caption\":\"invited_at\",\"sample_value\":1711471533,\"path\":[\"invited_at\"]},\"_p_expires_at\":{\"ret_btype\":\"number\",\"caption\":\"expires_at\",\"sample_value\":1714063533,\"path\":[\"expires_at\"]},\"_p_projects\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AGN.projects\",\"caption\":\"projects\",\"path\":[\"projects\"]}}},\"plugin_api.AGN.projects\":{\"caption\":\"Create Invite project\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/invites"
+        },
+        "AGQ": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=retrieve-invite",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "Retrieve Invite",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGQ",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGQ\":{\"caption\":\"Retrieve Invite\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_status\":{\"ret_btype\":\"text\",\"caption\":\"status\",\"sample_value\":\"string value\",\"path\":[\"status\"]},\"_p_invited_at\":{\"ret_btype\":\"number\",\"caption\":\"invited_at\",\"sample_value\":1711471533,\"path\":[\"invited_at\"]},\"_p_expires_at\":{\"ret_btype\":\"number\",\"caption\":\"expires_at\",\"sample_value\":1714063533,\"path\":[\"expires_at\"]},\"_p_accepted_at\":{\"ret_btype\":\"number\",\"caption\":\"accepted_at\",\"sample_value\":1711471533,\"path\":[\"accepted_at\"]},\"_p_projects\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AGQ.projects\",\"caption\":\"projects\",\"path\":[\"projects\"]}}},\"plugin_api.AGQ.projects\":{\"caption\":\"Retrieve Invite project\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/invites/[invite_id]",
+            "url_params": {
+                "AGR": {
+                    "allow_blank": false,
+                    "doc": "The ID of the invite to retrieve or delete.",
+                    "key": "invite_id",
+                    "value": "inv_abc"
+                }
+            }
+        },
+        "AGS": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=delete-invite",
+            "initialized": true,
+            "method": "delete_method",
+            "must_reinitialize": false,
+            "name": "Delete Invite",
+            "publish_as": "action",
+            "rank": 3,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGS",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGS\":{\"caption\":\"Delete Invite\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_deleted\":{\"ret_btype\":\"boolean\",\"caption\":\"deleted\",\"sample_value\":true,\"path\":[\"deleted\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/invites/[invite_id]",
+            "url_params": {
+                "AGT": {
+                    "allow_blank": false,
+                    "doc": "The ID of the invite to retrieve or delete.",
+                    "key": "invite_id",
+                    "value": "inv_abc"
+                }
+            }
+        },
+        "AGU": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-users",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Users",
+            "params": {
+                "AGV": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AGW": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "user_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 4,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGU",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGU\":{\"caption\":\"List User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AGU.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AGU.data\":{\"caption\":\"List Users data\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_added_at\":{\"ret_btype\":\"number\",\"caption\":\"added_at\",\"sample_value\":1711471533,\"path\":[\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/users"
+        },
+        "AGX": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=retrieve-user",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "Retrieve User",
+            "publish_as": "data",
+            "rank": 5,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGX",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGX\":{\"caption\":\"Retrieve User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_added_at\":{\"ret_btype\":\"number\",\"caption\":\"added_at\",\"sample_value\":1711471533,\"path\":[\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/users/[user_id]",
+            "url_params": {
+                "AGY": {
+                    "allow_blank": false,
+                    "doc": "The ID of the user.",
+                    "key": "user_id",
+                    "value": "user_abc"
+                }
+            }
+        },
+        "AGZ": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=delete-user",
+            "initialized": true,
+            "method": "delete_method",
+            "must_reinitialize": false,
+            "name": "Delete User",
+            "publish_as": "action",
+            "rank": 6,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGZ",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGZ\":{\"caption\":\"Delete User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_deleted\":{\"ret_btype\":\"boolean\",\"caption\":\"deleted\",\"sample_value\":true,\"path\":[\"deleted\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/users/[user_id]",
+            "url_params": {
+                "AGa": {
+                    "allow_blank": false,
+                    "doc": "The ID of the user.",
+                    "key": "user_id",
+                    "value": "user_abc"
+                }
+            }
+        },
+        "AGb": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-projects",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Projects",
+            "params": {
+                "AGc": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AGd": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "proj_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 7,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGb",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGb\":{\"caption\":\"List Project\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AGb.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AGb.data\":{\"caption\":\"List Projects data\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_archived_at\":{\"ret_btype\":\"text\",\"caption\":\"archived_at\",\"sample_value\":\"string value\",\"path\":[\"archived_at\"]},\"_p_status\":{\"ret_btype\":\"text\",\"caption\":\"status\",\"sample_value\":\"string value\",\"path\":[\"status\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects"
+        },
+        "AGe": {
+            "body": "{\n  \"name\": \"<name>\"\n}",
+            "body_params": {
+                "AGf": {
+                    "allow_blank": false,
+                    "doc": "Friendly project name shown in reporting.",
+                    "key": "name",
+                    "value": "Project example"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=create-project",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Create Project",
+            "publish_as": "action",
+            "rank": 8,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGe",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGe\":{\"caption\":\"Create Project\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_archived_at\":{\"ret_btype\":\"text\",\"caption\":\"archived_at\",\"sample_value\":\"string value\",\"path\":[\"archived_at\"]},\"_p_status\":{\"ret_btype\":\"text\",\"caption\":\"status\",\"sample_value\":\"string value\",\"path\":[\"status\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects"
+        },
+        "AGg": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=retrieve-project",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "Retrieve Project",
+            "publish_as": "data",
+            "rank": 9,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGg",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGg\":{\"caption\":\"Retrieve Project\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_archived_at\":{\"ret_btype\":\"text\",\"caption\":\"archived_at\",\"sample_value\":\"string value\",\"path\":[\"archived_at\"]},\"_p_status\":{\"ret_btype\":\"text\",\"caption\":\"status\",\"sample_value\":\"string value\",\"path\":[\"status\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]",
+            "url_params": {
+                "AGh": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AGi": {
+            "body": "{\n  \"name\": \"<name>\"\n}",
+            "body_params": {
+                "AGk": {
+                    "allow_blank": false,
+                    "doc": "Updated project name shown in reporting.",
+                    "key": "name",
+                    "value": "Project example"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=modify-project",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Modify Project",
+            "publish_as": "action",
+            "rank": 10,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGi",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGi\":{\"caption\":\"Modify Project\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_archived_at\":{\"ret_btype\":\"text\",\"caption\":\"archived_at\",\"sample_value\":\"string value\",\"path\":[\"archived_at\"]},\"_p_status\":{\"ret_btype\":\"text\",\"caption\":\"status\",\"sample_value\":\"string value\",\"path\":[\"status\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]",
+            "url_params": {
+                "AGj": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AGl": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=archive-project",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Archive Project",
+            "publish_as": "action",
+            "rank": 11,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGl",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGl\":{\"caption\":\"Archive Project\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_archived_at\":{\"ret_btype\":\"number\",\"caption\":\"archived_at\",\"sample_value\":1711471533,\"path\":[\"archived_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/archive",
+            "url_params": {
+                "AGm": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AGn": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-project-users",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Project Users",
+            "params": {
+                "AGo": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AGp": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "user_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 12,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGn",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGn\":{\"caption\":\"List Project User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AGn.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AGn.data\":{\"caption\":\"List Project Users data\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_added_at\":{\"ret_btype\":\"number\",\"caption\":\"added_at\",\"sample_value\":1711471533,\"path\":[\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/users",
+            "url_params": {
+                "AGq": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AGr": {
+            "body": "{\n  \"user_id\": \"<user_id>\",\n  \"role\": \"<role>\"\n}",
+            "body_params": {
+                "AGt": {
+                    "allow_blank": false,
+                    "doc": "The ID of an organization user to add to the project.",
+                    "key": "user_id",
+                    "value": "user_abc"
+                },
+                "AGu": {
+                    "allow_blank": false,
+                    "doc": "Project membership role to assign. Allowed values: owner or member.",
+                    "key": "role",
+                    "value": "member"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=create-project-user",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Create Project User",
+            "publish_as": "action",
+            "rank": 13,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGr",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGr\":{\"caption\":\"Create Project User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_added_at\":{\"ret_btype\":\"number\",\"caption\":\"added_at\",\"sample_value\":1711471533,\"path\":[\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/users",
+            "url_params": {
+                "AGs": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AGv": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=retrieve-project-user",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "Retrieve Project User",
+            "publish_as": "data",
+            "rank": 14,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGv",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGv\":{\"caption\":\"Retrieve Project User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_added_at\":{\"ret_btype\":\"number\",\"caption\":\"added_at\",\"sample_value\":1711471533,\"path\":[\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/users/[user_id]",
+            "url_params": {
+                "AGw": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AGx": {
+                    "allow_blank": false,
+                    "doc": "The ID of the user.",
+                    "key": "user_id",
+                    "value": "user_abc"
+                }
+            }
+        },
+        "AGy": {
+            "body": "{\n  \"role\": \"<role>\"\n}",
+            "body_params": {
+                "AHB": {
+                    "allow_blank": false,
+                    "doc": "Updated project role for the user. Allowed values: owner or member.",
+                    "key": "role",
+                    "value": "owner"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=modify-project-user",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Modify Project User",
+            "publish_as": "action",
+            "rank": 15,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AGy",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AGy\":{\"caption\":\"Modify Project User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_email\":{\"ret_btype\":\"text\",\"caption\":\"email\",\"sample_value\":\"string value\",\"path\":[\"email\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_added_at\":{\"ret_btype\":\"number\",\"caption\":\"added_at\",\"sample_value\":1711471533,\"path\":[\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/users/[user_id]",
+            "url_params": {
+                "AGz": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AHA": {
+                    "allow_blank": false,
+                    "doc": "The ID of the user.",
+                    "key": "user_id",
+                    "value": "user_abc"
+                }
+            }
+        },
+        "AHC": {
+            "body": "",
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=delete-project-user",
+            "initialized": true,
+            "method": "delete_method",
+            "must_reinitialize": false,
+            "name": "Delete Project User",
+            "publish_as": "action",
+            "rank": 16,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHC",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHC\":{\"caption\":\"Delete Project User\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_deleted\":{\"ret_btype\":\"boolean\",\"caption\":\"deleted\",\"sample_value\":true,\"path\":[\"deleted\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/users/[user_id]",
+            "url_params": {
+                "AHD": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AHE": {
+                    "allow_blank": false,
+                    "doc": "The ID of the user.",
+                    "key": "user_id",
+                    "value": "user_abc"
+                }
+            }
+        },
+        "AHF": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-project-service-accounts",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Project Service Accounts",
+            "params": {
+                "AHG": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AHH": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "svc_acct_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 17,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHF",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHF\":{\"caption\":\"List Project Service Account\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AHF.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AHF.data\":{\"caption\":\"List Project Service Accounts data\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/service_accounts",
+            "url_params": {
+                "AHI": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AHJ": {
+            "body": "{\n  \"name\": \"<name>\"\n}",
+            "body_params": {
+                "AHL": {
+                    "allow_blank": false,
+                    "doc": "Name of the service account to create in the project.",
+                    "key": "name",
+                    "value": "Service Account"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=create-project-service-account",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Create Project Service Account",
+            "publish_as": "action",
+            "rank": 18,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHJ",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHJ\":{\"caption\":\"Create Project Service Account\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_api_key.object\":{\"ret_btype\":\"text\",\"caption\":\"api_key object\",\"sample_value\":\"string value\",\"path\":[\"api_key\",\"object\"]},\"_p_api_key.id\":{\"ret_btype\":\"text\",\"caption\":\"api_key id\",\"sample_value\":\"string value\",\"path\":[\"api_key\",\"id\"]},\"_p_api_key.name\":{\"ret_btype\":\"text\",\"caption\":\"api_key name\",\"sample_value\":\"string value\",\"path\":[\"api_key\",\"name\"]},\"_p_api_key.value\":{\"ret_btype\":\"text\",\"caption\":\"api_key value\",\"sample_value\":\"string value\",\"path\":[\"api_key\",\"value\"]},\"_p_api_key.created_at\":{\"ret_btype\":\"number\",\"caption\":\"api_key created_at\",\"sample_value\":1711471533,\"path\":[\"api_key\",\"created_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/service_accounts",
+            "url_params": {
+                "AHK": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AHM": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=retrieve-project-service-account",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "Retrieve Project Service Account",
+            "publish_as": "data",
+            "rank": 19,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHM",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHM\":{\"caption\":\"Retrieve Project Service Account\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_role\":{\"ret_btype\":\"text\",\"caption\":\"role\",\"sample_value\":\"string value\",\"path\":[\"role\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/service_accounts/[service_account_id]",
+            "url_params": {
+                "AHN": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AHO": {
+                    "allow_blank": false,
+                    "doc": "The ID of the service account.",
+                    "key": "service_account_id",
+                    "value": "svc_acct_abc"
+                }
+            }
+        },
+        "AHP": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=delete-project-service-account",
+            "initialized": true,
+            "method": "delete_method",
+            "must_reinitialize": false,
+            "name": "Delete Project Service Account",
+            "publish_as": "action",
+            "rank": 20,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHP",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHP\":{\"caption\":\"Delete Project Service Account\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_deleted\":{\"ret_btype\":\"boolean\",\"caption\":\"deleted\",\"sample_value\":true,\"path\":[\"deleted\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/service_accounts/[service_account_id]",
+            "url_params": {
+                "AHQ": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AHR": {
+                    "allow_blank": false,
+                    "doc": "The ID of the service account.",
+                    "key": "service_account_id",
+                    "value": "svc_acct_abc"
+                }
+            }
+        },
+        "AHS": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-project-api-keys",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Project API Keys",
+            "params": {
+                "AHT": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AHU": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "key_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 21,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHS",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHS\":{\"caption\":\"List Project API Key\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AHS.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AHS.data\":{\"caption\":\"List Project API Keys data\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_redacted_value\":{\"ret_btype\":\"text\",\"caption\":\"redacted_value\",\"sample_value\":\"string value\",\"path\":[\"redacted_value\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_owner.object\":{\"ret_btype\":\"text\",\"caption\":\"owner object\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"object\"]},\"_p_owner.id\":{\"ret_btype\":\"text\",\"caption\":\"owner id\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"id\"]},\"_p_owner.name\":{\"ret_btype\":\"text\",\"caption\":\"owner name\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"name\"]},\"_p_owner.email\":{\"ret_btype\":\"text\",\"caption\":\"owner email\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"email\"]},\"_p_owner.role\":{\"ret_btype\":\"text\",\"caption\":\"owner role\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"role\"]},\"_p_owner.added_at\":{\"ret_btype\":\"number\",\"caption\":\"owner added_at\",\"sample_value\":1711471533,\"path\":[\"owner\",\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/api_keys",
+            "url_params": {
+                "AHV": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AHW": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=retrieve-project-api-key",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "Retrieve Project API Key",
+            "publish_as": "data",
+            "rank": 22,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHW",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHW\":{\"caption\":\"Retrieve Project API Key\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_redacted_value\":{\"ret_btype\":\"text\",\"caption\":\"redacted_value\",\"sample_value\":\"string value\",\"path\":[\"redacted_value\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_owner.object\":{\"ret_btype\":\"text\",\"caption\":\"owner object\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"object\"]},\"_p_owner.id\":{\"ret_btype\":\"text\",\"caption\":\"owner id\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"id\"]},\"_p_owner.name\":{\"ret_btype\":\"text\",\"caption\":\"owner name\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"name\"]},\"_p_owner.email\":{\"ret_btype\":\"text\",\"caption\":\"owner email\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"email\"]},\"_p_owner.role\":{\"ret_btype\":\"text\",\"caption\":\"owner role\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"role\"]},\"_p_owner.added_at\":{\"ret_btype\":\"number\",\"caption\":\"owner added_at\",\"sample_value\":1711471533,\"path\":[\"owner\",\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/api_keys/[key_id]",
+            "url_params": {
+                "AHX": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AHY": {
+                    "allow_blank": false,
+                    "doc": "The ID of the API key.",
+                    "key": "key_id",
+                    "value": "key_abc"
+                }
+            }
+        },
+        "AHZ": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=delete-project-api-key",
+            "initialized": true,
+            "method": "delete_method",
+            "must_reinitialize": false,
+            "name": "Delete Project API Key",
+            "publish_as": "action",
+            "rank": 23,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHZ",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHZ\":{\"caption\":\"Delete Project API Key\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_deleted\":{\"ret_btype\":\"boolean\",\"caption\":\"deleted\",\"sample_value\":true,\"path\":[\"deleted\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/api_keys/[key_id]",
+            "url_params": {
+                "AHa": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AHb": {
+                    "allow_blank": false,
+                    "doc": "The ID of the API key.",
+                    "key": "key_id",
+                    "value": "key_abc"
+                }
+            }
+        },
+        "AHc": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-project-rate-limits",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Project Rate Limits",
+            "params": {
+                "AHd": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AHe": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "rl-ada"
+                }
+            },
+            "publish_as": "data",
+            "rank": 24,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHc",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHc\":{\"caption\":\"List Project Rate Limit\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AHc.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AHc.data\":{\"caption\":\"List Project Rate Limits data\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_model\":{\"ret_btype\":\"text\",\"caption\":\"model\",\"sample_value\":\"string value\",\"path\":[\"model\"]},\"_p_max_requests_per_1_minute\":{\"ret_btype\":\"number\",\"caption\":\"max_requests_per_1_minute\",\"sample_value\":600,\"path\":[\"max_requests_per_1_minute\"]},\"_p_max_tokens_per_1_minute\":{\"ret_btype\":\"number\",\"caption\":\"max_tokens_per_1_minute\",\"sample_value\":150000,\"path\":[\"max_tokens_per_1_minute\"]},\"_p_max_images_per_1_minute\":{\"ret_btype\":\"number\",\"caption\":\"max_images_per_1_minute\",\"sample_value\":10,\"path\":[\"max_images_per_1_minute\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/rate_limits",
+            "url_params": {
+                "AHf": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                }
+            }
+        },
+        "AHg": {
+            "body": "{\n  \"max_requests_per_1_minute\": <max_requests_per_1_minute>,\n  \"max_tokens_per_1_minute\": <max_tokens_per_1_minute>,\n  \"max_images_per_1_minute\": <max_images_per_1_minute>\n}",
+            "body_params": {
+                "AHj": {
+                    "allow_blank": false,
+                    "doc": "Maximum tokens per minute allowed for the project and model.",
+                    "key": "max_requests_per_1_minute",
+                    "value": "1000"
+                },
+                "AHk": {
+                    "allow_blank": false,
+                    "doc": "Maximum requests per minute allowed for the project and model.",
+                    "key": "max_tokens_per_1_minute",
+                    "value": "200000"
+                },
+                "AHl": {
+                    "allow_blank": false,
+                    "doc": "Maximum images per minute allowed for the project and model.",
+                    "key": "max_images_per_1_minute",
+                    "value": "0"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=update-project-rate-limit",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Update Project Rate Limit",
+            "publish_as": "action",
+            "rank": 25,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHg",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHg\":{\"caption\":\"Update Project Rate Limit\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_model\":{\"ret_btype\":\"text\",\"caption\":\"model\",\"sample_value\":\"string value\",\"path\":[\"model\"]},\"_p_max_requests_per_1_minute\":{\"ret_btype\":\"number\",\"caption\":\"max_requests_per_1_minute\",\"sample_value\":1000,\"path\":[\"max_requests_per_1_minute\"]},\"_p_max_tokens_per_1_minute\":{\"ret_btype\":\"number\",\"caption\":\"max_tokens_per_1_minute\",\"sample_value\":200000,\"path\":[\"max_tokens_per_1_minute\"]},\"_p_max_images_per_1_minute\":{\"ret_btype\":\"number\",\"caption\":\"max_images_per_1_minute\",\"sample_value\":0,\"path\":[\"max_images_per_1_minute\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/projects/[project_id]/rate_limits/[rate_limit_id]",
+            "url_params": {
+                "AHh": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project.",
+                    "key": "project_id",
+                    "value": "proj_abc"
+                },
+                "AHi": {
+                    "allow_blank": false,
+                    "doc": "The ID of the project rate limit entry.",
+                    "key": "rate_limit_id",
+                    "value": "rl-ada"
+                }
+            }
+        },
+        "AHm": {
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Admin API Keys",
+            "params": {
+                "AHn": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).\n=",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AHo": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "key_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 26,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHm",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHm\":{\"caption\":\"List Admin API Key\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AHm.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AHm.data\":{\"caption\":\"List Admin API Keys data\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_redacted_value\":{\"ret_btype\":\"text\",\"caption\":\"redacted_value\",\"sample_value\":\"string value\",\"path\":[\"redacted_value\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_last_used_at\":{\"ret_btype\":\"number\",\"caption\":\"last_used_at\",\"sample_value\":1711471534,\"path\":[\"last_used_at\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_owner.type\":{\"ret_btype\":\"text\",\"caption\":\"owner type\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"type\"]},\"_p_owner.user.object\":{\"ret_btype\":\"text\",\"caption\":\"owner user object\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"object\"]},\"_p_owner.user.id\":{\"ret_btype\":\"text\",\"caption\":\"owner user id\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"id\"]},\"_p_owner.user.name\":{\"ret_btype\":\"text\",\"caption\":\"owner user name\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"name\"]},\"_p_owner.user.email\":{\"ret_btype\":\"text\",\"caption\":\"owner user email\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"email\"]},\"_p_owner.user.role\":{\"ret_btype\":\"text\",\"caption\":\"owner user role\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"role\"]},\"_p_owner.user.added_at\":{\"ret_btype\":\"number\",\"caption\":\"owner user added_at\",\"sample_value\":1711471533,\"path\":[\"owner\",\"user\",\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/admin_api_keys"
+        },
+        "AHp": {
+            "body": "{\n  \"name\": \"<name>\",\n  \"owner\": {\n    \"type\": \"<owner_type>\",\n    \"id\": \"<owner_id>\"\n  }\n}",
+            "body_params": {
+                "AHq": {
+                    "allow_blank": false,
+                    "doc": "Human-readable name for the new admin API key.",
+                    "key": "name",
+                    "value": "Administration Key"
+                },
+                "AHr": {
+                    "allow_blank": false,
+                    "doc": "Owner type for the key owner object. For admin keys, owner type is user.",
+                    "key": "owner_type",
+                    "value": "user"
+                },
+                "AHs": {
+                    "allow_blank": false,
+                    "doc": "ID of the user who owns the admin API key.",
+                    "key": "owner_id",
+                    "value": "user_abc"
+                }
+            },
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=create-admin-api-key",
+            "initialized": true,
+            "method": "post",
+            "must_reinitialize": false,
+            "name": "Create Admin API Key",
+            "publish_as": "action",
+            "rank": 27,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHp",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHp\":{\"caption\":\"Create Admin API Key\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_redacted_value\":{\"ret_btype\":\"text\",\"caption\":\"redacted_value\",\"sample_value\":\"string value\",\"path\":[\"redacted_value\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_last_used_at\":{\"ret_btype\":\"number\",\"caption\":\"last_used_at\",\"sample_value\":1711471534,\"path\":[\"last_used_at\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_owner.type\":{\"ret_btype\":\"text\",\"caption\":\"owner type\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"type\"]},\"_p_owner.user.object\":{\"ret_btype\":\"text\",\"caption\":\"owner user object\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"object\"]},\"_p_owner.user.id\":{\"ret_btype\":\"text\",\"caption\":\"owner user id\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"id\"]},\"_p_owner.user.name\":{\"ret_btype\":\"text\",\"caption\":\"owner user name\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"name\"]},\"_p_owner.user.email\":{\"ret_btype\":\"text\",\"caption\":\"owner user email\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"email\"]},\"_p_owner.user.role\":{\"ret_btype\":\"text\",\"caption\":\"owner user role\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"role\"]},\"_p_owner.user.added_at\":{\"ret_btype\":\"number\",\"caption\":\"owner user added_at\",\"sample_value\":1711471533,\"path\":[\"owner\",\"user\",\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/admin_api_keys"
+        },
+        "AHt": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=retrieve-admin-api-key",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "Retrieve Admin API Key",
+            "publish_as": "data",
+            "rank": 28,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHt",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHt\":{\"caption\":\"Retrieve Admin API Key\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_redacted_value\":{\"ret_btype\":\"text\",\"caption\":\"redacted_value\",\"sample_value\":\"string value\",\"path\":[\"redacted_value\"]},\"_p_name\":{\"ret_btype\":\"text\",\"caption\":\"name\",\"sample_value\":\"string value\",\"path\":[\"name\"]},\"_p_created_at\":{\"ret_btype\":\"number\",\"caption\":\"created_at\",\"sample_value\":1711471533,\"path\":[\"created_at\"]},\"_p_last_used_at\":{\"ret_btype\":\"number\",\"caption\":\"last_used_at\",\"sample_value\":1711471534,\"path\":[\"last_used_at\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_owner.type\":{\"ret_btype\":\"text\",\"caption\":\"owner type\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"type\"]},\"_p_owner.user.object\":{\"ret_btype\":\"text\",\"caption\":\"owner user object\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"object\"]},\"_p_owner.user.id\":{\"ret_btype\":\"text\",\"caption\":\"owner user id\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"id\"]},\"_p_owner.user.name\":{\"ret_btype\":\"text\",\"caption\":\"owner user name\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"name\"]},\"_p_owner.user.email\":{\"ret_btype\":\"text\",\"caption\":\"owner user email\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"email\"]},\"_p_owner.user.role\":{\"ret_btype\":\"text\",\"caption\":\"owner user role\",\"sample_value\":\"string value\",\"path\":[\"owner\",\"user\",\"role\"]},\"_p_owner.user.added_at\":{\"ret_btype\":\"number\",\"caption\":\"owner user added_at\",\"sample_value\":1711471533,\"path\":[\"owner\",\"user\",\"added_at\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/admin_api_keys/[key_id]",
+            "url_params": {
+                "AHu": {
+                    "allow_blank": false,
+                    "doc": "The ID of the API key.",
+                    "key": "key_id",
+                    "value": "key_abc"
+                }
+            }
+        },
+        "AHv": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=delete-admin-api-key",
+            "initialized": true,
+            "method": "delete_method",
+            "must_reinitialize": false,
+            "name": "Delete Admin API Key",
+            "publish_as": "action",
+            "rank": 29,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHv",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHv\":{\"caption\":\"Delete Admin API Key\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_deleted\":{\"ret_btype\":\"boolean\",\"caption\":\"deleted\",\"sample_value\":true,\"path\":[\"deleted\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/admin_api_keys/[key_id]",
+            "url_params": {
+                "AHw": {
+                    "allow_blank": false,
+                    "doc": "The ID of the API key.",
+                    "key": "key_id",
+                    "value": "key_abc"
+                }
+            }
+        },
+        "AHx": {
+            "doc_link": "https://openai-plugin-omniportl.bubbleapps.io/version-test/?plugin=openai-administration&endpoint=list-audit-logs",
+            "initialized": true,
+            "method": "get",
+            "must_reinitialize": false,
+            "name": "List Audit Logs",
+            "params": {
+                "AHy": {
+                    "allow_blank": true,
+                    "doc": "Maximum number of objects to return (admin list endpoints default to 20 and support pagination).",
+                    "key": "limit",
+                    "optional": true,
+                    "value": "20"
+                },
+                "AHz": {
+                    "allow_blank": true,
+                    "doc": "Pagination cursor pointing to an object ID after which to continue listing results.",
+                    "key": "after",
+                    "optional": true,
+                    "value": "audit_log_abc"
+                }
+            },
+            "publish_as": "data",
+            "rank": 30,
+            "ret_value": "api.1768506074207x203234894738882560.plugin_api.AHx",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AHx\":{\"caption\":\"List Audit Log\",\"fields\":{\"_p_object\":{\"ret_btype\":\"text\",\"caption\":\"object\",\"sample_value\":\"string value\",\"path\":[\"object\"]},\"_p_data\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AHx.data\",\"caption\":\"data\",\"path\":[\"data\"]},\"_p_first_id\":{\"ret_btype\":\"text\",\"caption\":\"first_id\",\"sample_value\":\"string value\",\"path\":[\"first_id\"]},\"_p_last_id\":{\"ret_btype\":\"text\",\"caption\":\"last_id\",\"sample_value\":\"string value\",\"path\":[\"last_id\"]},\"_p_has_more\":{\"ret_btype\":\"boolean\",\"caption\":\"has_more\",\"sample_value\":false,\"path\":[\"has_more\"]}}},\"plugin_api.AHx.data\":{\"caption\":\"List Audit Logs data\",\"fields\":{\"_p_id\":{\"ret_btype\":\"text\",\"caption\":\"id\",\"sample_value\":\"string value\",\"path\":[\"id\"]},\"_p_type\":{\"ret_btype\":\"text\",\"caption\":\"type\",\"sample_value\":\"string value\",\"path\":[\"type\"]},\"_p_effective_at\":{\"ret_btype\":\"number\",\"caption\":\"effective_at\",\"sample_value\":1724775684,\"path\":[\"effective_at\"]},\"_p_project.id\":{\"ret_btype\":\"text\",\"caption\":\"project id\",\"sample_value\":\"string value\",\"path\":[\"project\",\"id\"]},\"_p_project.name\":{\"ret_btype\":\"text\",\"caption\":\"project name\",\"sample_value\":\"string value\",\"path\":[\"project\",\"name\"]},\"_p_actor.type\":{\"ret_btype\":\"text\",\"caption\":\"actor type\",\"sample_value\":\"string value\",\"path\":[\"actor\",\"type\"]},\"_p_actor.session.user.id\":{\"ret_btype\":\"text\",\"caption\":\"actor session user id\",\"sample_value\":\"string value\",\"path\":[\"actor\",\"session\",\"user\",\"id\"]},\"_p_actor.session.user.email\":{\"ret_btype\":\"text\",\"caption\":\"actor session user email\",\"sample_value\":\"string value\",\"path\":[\"actor\",\"session\",\"user\",\"email\"]},\"_p_api_key.id\":{\"ret_btype\":\"text\",\"caption\":\"api_key id\",\"sample_value\":\"string value\",\"path\":[\"api_key\",\"id\"]},\"_p_changes\":{\"ret_btype\":\"list.api.1768506074207x203234894738882560.plugin_api.AHx.changes\",\"caption\":\"changes\",\"path\":[\"changes\"]}}},\"plugin_api.AHx.changes\":{\"caption\":\"List Audit Logs change\",\"fields\":{\"_p_type\":{\"ret_btype\":\"text\",\"caption\":\"type\",\"sample_value\":\"string value\",\"path\":[\"type\"]},\"_p_field\":{\"ret_btype\":\"text\",\"caption\":\"field\",\"sample_value\":\"string value\",\"path\":[\"field\"]},\"_p_old_value\":{\"ret_btype\":\"text\",\"caption\":\"old_value\",\"sample_value\":\"string value\",\"path\":[\"old_value\"]},\"_p_new_value\":{\"ret_btype\":\"text\",\"caption\":\"new_value\",\"sample_value\":\"string value\",\"path\":[\"new_value\"]}}}}",
+            "url": "https://api.openai.com/v1/organization/audit_logs"
+        }
+    },
+    "human": "OpenAI Administration API",
+    "said": "YXBpLWNvbm5lY3Rvci1wbHVnaW5zLTQ0MTc3",
+    "shared_headers": {
+        "h1": {
+            "key": "accept",
+            "value": "application/json",
+            "visibility": "hidden"
+        }
+    },
+    "token_param_name": "Authorization"
+}
